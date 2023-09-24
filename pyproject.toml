@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "torch-tutorial"
+version = "0.1.0"
+description = ""
+authors = ["Ken Yoshizoe <kenyoshizoe@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = {version = "^2.0.1+cpu", source = "torch_cpu"}
+torchvision = {version = "^0.15.2+cpu", source = "torch_cpu"}
+torchaudio = {version = "^2.0.2+cpu", source = "torch_cpu"}
+
+
+[[tool.poetry.source]]
+name = "torch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
